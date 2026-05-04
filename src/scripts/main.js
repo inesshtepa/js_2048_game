@@ -4,7 +4,7 @@ const Game = require('../modules/Game.class');
 const game = new Game();
 
 const cells = [...document.querySelectorAll('.field-cell')];
-const score = document.querySelector('.game-score');
+const scoreElement = document.querySelector('.game-score');
 const button = document.querySelector('.button');
 
 const startMessage = document.querySelector('.message-start');
@@ -27,7 +27,8 @@ function render() {
     }
   });
 
-  score.textContent = String(game.getScore());
+  scoreElement.textContent = String(game.getScore());
+  scoreElement.removeAttribute('value');
 
   startMessage.classList.toggle('hidden', game.getStatus() !== 'idle');
   winMessage.classList.toggle('hidden', game.getStatus() !== 'win');
