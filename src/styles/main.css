@@ -41,59 +41,6 @@ body {
   box-shadow:
     inset 0 2px 4px rgba(255, 255, 255, 0.35),
     inset 0 -4px 6px rgba(90, 70, 55, 0.12);
-
-  &--2 {
-    background: #eee4da;
-  }
-
-  &--4 {
-    background: #ede0c8;
-  }
-
-  &--8 {
-    color: #f9f6f2;
-    background: #f2b179;
-  }
-
-  &--16 {
-    color: #f9f6f2;
-    background: #f59563;
-  }
-
-  &--32 {
-    color: #f9f6f2;
-    background: #f67c5f;
-  }
-
-  &--64 {
-    color: #f9f6f2;
-    background: #f65e3b;
-  }
-
-  &--128 {
-    color: #f9f6f2;
-    background: #edcf72;
-  }
-
-  &--256 {
-    color: #f9f6f2;
-    background: #edcc61;
-  }
-
-  &--512 {
-    color: #f9f6f2;
-    background: #edc850;
-  }
-
-  &--1024 {
-    color: #f9f6f2;
-    background: #edc53f;
-  }
-
-  &--2048 {
-    color: #f9f6f2;
-    background: #edc22e;
-  }
 }
 
 .game-field {
@@ -250,4 +197,112 @@ h1 {
 .message-container {
   width: 100%;
   height: 150px;
+}
+
+.button--2 {
+  color: #776e65;
+  background: #eee4da;
+}
+
+.button--4 {
+  color: #776e65;
+  background: #ede0c8;
+}
+
+.button--8 {
+  color: #f9f6f2;
+  background: #f2b179;
+}
+
+.button--16 {
+  color: #f9f6f2;
+  background: #f59563;
+}
+
+.button--32 {
+  color: #f9f6f2;
+  background: #f67c5f;
+}
+
+.button--64 {
+  color: #f9f6f2;
+  background: #f65e3b;
+}
+
+.button--128 {
+  color: #f9f6f2;
+  background: #edcf72;
+}
+
+.button--256 {
+  color: #f9f6f2;
+  background: #edcc61;
+}
+
+.button--512 {
+  color: #f9f6f2;
+  background: #edc850;
+}
+
+.button--1024 {
+  color: #f9f6f2;
+  background: #edc53f;
+}
+
+.button--2048 {
+  color: #f9f6f2;
+  background: #edc22e;
+}
+
+.field-cell--2 {
+  background: #eee4da;
+}
+
+.field-cell--4 {
+  background: #ede0c8;
+}
+
+.field-cell--8 {
+  color: #f9f6f2;
+  background: #f2b179;
+}
+
+.field-cell--16 {
+  color: #f9f6f2;
+  background: #f59563;
+}
+
+.field-cell--32 {
+  color: #f9f6f2;
+  background: #f67c5f;
+}
+
+.field-cell--64 {
+  color: #f9f6f2;
+  background: #f65e3b;
+}
+
+.field-cell--128 {
+  color: #f9f6f2;
+  background: #edcf72;
+}
+
+.field-cell--256 {
+  color: #f9f6f2;
+  background: #edcc61;
+}
+
+.field-cell--512 {
+  color: #f9f6f2;
+  background: #edc850;
+}
+
+.field-cell--1024 {
+  color: #f9f6f2;
+  background: #edc53f;
+}
+
+.field-cell--2048 {
+  color: #f9f6f2;
+  background: #edc22e;
 }

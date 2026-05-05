@@ -28,7 +28,22 @@ function render() {
   });
 
   scoreElement.textContent = String(game.getScore());
-  scoreElement.removeAttribute('value');
+
+  const maxValue = Math.max(...state.flat());
+
+  button.className = 'button';
+
+  if (game.getStatus() === 'idle') {
+    button.classList.add('start');
+    button.textContent = 'Start';
+  } else {
+    button.classList.add('restart');
+    button.textContent = 'Restart';
+  }
+
+  if (game.getStatus() === 'playing' && maxValue > 0) {
+    button.classList.add(`button--${maxValue}`);
+  }
 
   startMessage.classList.toggle('hidden', game.getStatus() !== 'idle');
   winMessage.classList.toggle('hidden', game.getStatus() !== 'win');
@@ -38,22 +53,14 @@ function render() {
 button.addEventListener('click', () => {
   if (game.getStatus() === 'idle') {
     game.start();
-
-    button.textContent = 'Restart';
-    button.classList.remove('start');
-    button.classList.add('restart');
   } else {
     game.restart();
-
-    button.textContent = 'Start';
-    button.classList.remove('restart');
-    button.classList.add('start');
   }
 
   render();
 });
 
-document.addEventListener('keydown', () => {
+document.addEventListener('keydown', (keyEvent) => {
   const moves = {
     ArrowLeft: () => game.moveLeft(),
     ArrowRight: () => game.moveRight(),
@@ -61,12 +68,12 @@ document.addEventListener('keydown', () => {
     ArrowDown: () => game.moveDown(),
   };
 
-  if (!moves[event.key]) {
+  if (!moves[keyEvent.key]) {
     return;
   }
 
-  event.preventDefault();
-  moves[event.key]();
+  keyEvent.preventDefault();
+  moves[keyEvent.key]();
 
   render();
 });
